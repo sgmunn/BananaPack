@@ -1,0 +1,36 @@
+<ExtensionModel>
+
+	<!-- Command Definitions -->
+
+    <Extension path = "/MonoDevelop/Ide/Commands/BananaPack">
+        <Command id = "BananaTools.Navigation.CommandIds.GotoDeclaration"
+                 _label = "Go to Declaration"
+                 _description = ""
+                 macShortcut = "Alt|D"
+                 shortcut = "Alt|D"
+                 defaultHandler = "BananaTools.Navigation.Commands.GotoDeclarationCommandHandler"/>
+
+        <Command id = "BananaTools.Navigation.CommandIds.DropMarker"
+                 _label = "Drop Marker"
+                 _description = "Drops a navigation marker"
+                 macShortcut = "Alt|Shift|."
+                 shortcut = "Alt|Shift|."
+                 defaultHandler = "BananaTools.Navigation.Commands.DropNavigationMarkerCommandHandler"/>
+
+        <Command id = "BananaTools.Navigation.CommandIds.PickupMarker"
+                 _label = "Pickup Marker"
+                 _description = "Navigates to the most recently dropped navigation marker"
+                 macShortcut = "Alt|."
+                 shortcut = "Alt|."
+                 defaultHandler = "BananaTools.Navigation.Commands.PickupNavigationMarkerCommandHandler"/>
+    </Extension>
+
+	<!-- Add commands to menus -->
+
+    <Extension path = "/MonoDevelop/Ide/MainMenu/Search">
+        <SeparatorItem id = "OpenSeparator" />
+        <CommandItem id="BananaTools.Navigation.CommandIds.DropMarker"  />
+        <CommandItem id="BananaTools.Navigation.CommandIds.PickupMarker"  />
+    </Extension>
+
+</ExtensionModel>

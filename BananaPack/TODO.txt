@@ -1,0 +1,2 @@
+﻿handle document load / unloads so that we can either add back in markers or remove from stack if we want
+-- we need to at least remove the marker and add a new one to the document so that removals work after doc close / open

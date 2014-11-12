@@ -1,0 +1,76 @@
+<Addin  id          = "BananaPack"  
+        namespace   = "BananaTools"  
+        name        = "BananaPack"  
+        author      = "sgmunn"  
+        copyright   = "All rights reserved"  
+        description = "A set of tools for Xamarin Studio."  
+        category    = "Tools"  
+        version     = "1.0">
+        
+    <Dependencies>
+        <Addin id="::MonoDevelop.Ide" version="5.0" />
+        <Addin id="::MonoDevelop.Core" version="5.0" />
+        <Addin id="::MonoDevelop.Refactoring" version="5.0" />
+    </Dependencies>
+
+	<Extension path = "/MonoDevelop/Ide/Commands">
+		<Category _name = "Banana Pack" id = "BananaPack">
+		</Category>
+	</Extension>
+
+
+    <!-- Navigation Markers 
+    
+    <Extension path = "/MonoDevelop/Ide/Commands/Search">
+        <Command id = "MonkeyWrench.Commands.NavigationCommands.DropMarker"
+                 _label = "Drop Navigation Marker"
+                 _description = "Drops a navigation marker"
+                 macShortcut = "Alt|Shift|."
+                 shortcut = "Alt|Shift|."
+                 defaultHandler = "MonkeyWrench.Commands.DropNavigationMarkerCommand"/>
+    </Extension>
+    
+    <Extension path = "/MonoDevelop/Ide/Commands/Search">
+        <Command id = "MonkeyWrench.Commands.NavigationCommands.PickupMarker"
+                 _label = "Pickup Navigation Marker"
+                 _description = "Navigates to the most recently dropped navigation marker"
+                 macShortcut = "Alt|."
+                 shortcut = "Alt|."
+                 defaultHandler = "MonkeyWrench.Commands.PickupNavigationMarkerCommand"/>
+    </Extension>
+
+    Navigation Commands
+    
+    <Extension path = "/MonoDevelop/Ide/Commands/Search">
+        <Command id = "MonkeyWrench.Commands.NavigationCommands.GotoNextReference"
+                 _label = "Goto Next Reference"
+                 _description = "does just that"
+                 macShortcut = "Alt|]"
+                 shortcut = "Alt|]"
+                 defaultHandler = "MonkeyWrench.Commands.GotoNextReferenceCommand"/>
+    </Extension>
+    
+    <Extension path = "/MonoDevelop/Ide/Commands/Search">
+        <Command id = "MonkeyWrench.Commands.NavigationCommands.GotoPreviousReference"
+                 _label = "Goto Previous Reference"
+                 _description = "does just that"
+                 macShortcut = "Alt|["
+                 shortcut = "Alt|["
+                 defaultHandler = "MonkeyWrench.Commands.GotoPreviousReferenceCommand"/>
+    </Extension>
+
+    <Extension path = "/MonoDevelop/Ide/MainMenu/Search">
+        <SeparatorItem id = "OpenSeparator" />
+        <CommandItem id="MonkeyWrench.Commands.NavigationCommands.DropMarker" />
+        <CommandItem id="MonkeyWrench.Commands.NavigationCommands.PickupMarker"  />
+        <CommandItem id="MonkeyWrench.Commands.NavigationCommands.GotoNextReference" />
+        <CommandItem id="MonkeyWrench.Commands.NavigationCommands.GotoPreviousReference" />
+    </Extension>
+        
+        
+    <!- - Startup -->
+        
+    <Extension path="/MonoDevelop/Ide/StartupHandlers">
+        <Class class="BananaTools.Startup" />
+    </Extension>
+</Addin>
